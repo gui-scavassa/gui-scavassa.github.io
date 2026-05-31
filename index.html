@@ -89,7 +89,7 @@
   .stat-num { font-size: 28px; font-weight: 300; color: var(--accent); font-family: var(--mono); }
   .stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; letter-spacing: 0.04em; }
 
-  .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
   .skill-group { background: var(--surface); padding: 28px; transition: background 0.2s; }
   .skill-group:hover { background: #161616; }
   .skill-group-title { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
@@ -188,7 +188,7 @@
     #hero { padding: 120px 20px 60px; } .hero-inner { grid-template-columns: 1fr; } .hero-photo-wrap { display: none; }
     section { padding: 60px 20px; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-    .skills-grid, .future-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); } .future-grid { grid-template-columns: 1fr; }
     .certs-grid, .projects-grid { grid-template-columns: 1fr; }
     .about-stats { grid-template-columns: 1fr; }
     .exp-item { grid-template-columns: 1fr; gap: 6px; }
@@ -316,7 +316,28 @@
         <li><span class="skill-dot"></span>Linux</li>
       </ul>
     </div>
+    <div class="skill-group">
+      <div class="skill-group-title" data-i18n="skill_soft_title">// Soft Skills</div>
+      <ul class="skill-list">
+        <li><span class="skill-dot"></span><span data-i18n="ss1">Comunicação Eficaz</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss2">Trabalho em Equipe</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss3">Pensamento Analítico</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss4">Resolução de Problemas</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss5">Organização</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss6">Gestão do Tempo</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss7">Adaptabilidade</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss8">Aprendizagem Contínua</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss9">Proatividade</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss10">Inteligência Emocional</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss11">Negociação</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss12">Foco em Resultados</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss13">Orientação ao Cliente</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss14">Resiliência</span></li>
+        <li><span class="skill-dot"></span><span data-i18n="ss15">Liderança Situacional</span></li>
+      </ul>
+    </div>
   </div>
+
   <div class="section-label reveal" style="margin-top:56px;">
     <span class="label-num" style="color:var(--accent2)">↳</span><span class="label-title" data-i18n="sec_certs">Certificações</span><div class="label-line"></div>
   </div>
@@ -428,11 +449,19 @@
     <div class="exp-item reveal">
       <div class="exp-period" data-i18n="exp1_period">Abr/2026<br />Presente</div>
       <div>
-        <div class="exp-role" data-i18n="exp1_role">Técnico de Serviço ao Cliente</div>
+        <div class="exp-role" data-i18n="exp1_role">Técnico de Fibra Óptica</div>
         <div class="exp-company">Vivo Telefônica · São Paulo, SP</div>
         <ul class="exp-bullets">
-          <li data-i18n="exp1_b1">Atendimento técnico e suporte a clientes, garantindo qualidade na resolução de demandas.</li>
+          <li data-i18n="exp1_b1">Instalação, manutenção e reparo de redes de fibra óptica em clientes residenciais e corporativos.</li>
+          <li data-i18n="exp1_b2">Configuração e ativação de serviços de internet, telefonia e televisão.</li>
+          <li data-i18n="exp1_b3">Execução de testes de conectividade e qualidade do sinal com equipamentos de medição e diagnóstico.</li>
+          <li data-i18n="exp1_b4">Identificação e correção de falhas em redes ópticas, garantindo a continuidade dos serviços.</li>
+          <li data-i18n="exp1_b5">Registro de atividades e gestão de ordens de serviço em sistemas corporativos.</li>
+          <li data-i18n="exp1_b6">Atuação em campo com foco na satisfação do cliente e resolução eficiente de problemas técnicos.</li>
         </ul>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:5px;">
+          <span class="tag">FTTH</span><span class="tag">Fibra Óptica</span><span class="tag">Roteadores & ONTs</span><span class="tag">Troubleshooting</span><span class="tag">Redes</span><span class="tag">Cabeamento</span><span class="tag">SLA</span>
+        </div>
       </div>
     </div>
     <div class="exp-item reveal">
@@ -531,22 +560,22 @@
   window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id;});navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'#e8e8e8':'';} );});
 
   // ---- i18n TRANSLATIONS ----
-        const translations = {
+          const translations = {
     pt: {
       nav_sobre:'sobre', nav_skills:'skills', nav_projetos:'projetos', nav_experiencia:'experiência', nav_contato:'contato',
       hero_desc:'Desenvolvedor em formação com foco em segurança de redes, dados e inteligência artificial. Construindo soluções na interseção entre código, análise e proteção digital.',
       btn_projects:'Ver Projetos →', btn_contact:'Contato',
-      sec_sobre:'Sobre', sec_skills:'Skills & Tecnologias', sec_certs:'Certificações', sec_projects:'Projetos', sec_future:'Projetos Futuros', sec_exp:'Experiência', sec_contact:'Contato',
+      sec_sobre:'Sobre', sec_skills:'Skills & Tecnologias', sec_certs:'Certificações', sec_soft:'Soft Skills', sec_projects:'Projetos', sec_future:'Projetos Futuros', sec_exp:'Experiência', sec_contact:'Contato',
       about_p1:'Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na Anhanguera, São Paulo — com trajetória construída em vendas e gestão, hoje 100% direcionada para tecnologia.',
       about_p2:'Meu foco está na <strong>tríplice: segurança, dados e IA</strong>. Acredito que entender como sistemas funcionam, como protegê-los e como extrair inteligência deles é a base de qualquer profissional tech relevante.',
       about_p3:'Certificações práticas em <strong>Pentest, Segurança de Redes, SQL, Linux</strong> e IA Generativa — e aprendendo todos os dias.',
       stat1:'Certificações técnicas', stat2:'Projetos desenvolvidos', stat3:'Conclusão ADS — Anhanguera',
       idiomas_label:'// IDIOMAS', lang_pt:'Português', lang_en:'Inglês', lang_es:'Espanhol',
       lang_pt_level:'Nativo', lang_en_level:'Fluente', lang_es_level:'Intermediário',
-      skill_sec_title:'// Segurança', skill_data_title:'// Dados & IA', skill_dev_title:'// Desenvolvimento',
+      skill_sec_title:'// Segurança', skill_soft_title:'// Soft Skills', skill_data_title:'// Dados & IA', skill_dev_title:'// Desenvolvimento',
       sk_netsec:'Segurança de Redes', sk_analytical:'Raciocínio Analítico', sk_python:'Python (aprendendo)', sk_logic:'Lógica de Programação',
-      cert1:'Segurança de Rede: Firewall, WAF e SIEM', cert6:'IA Generativa', cert8:'Lógica de Programação (3 módulos)', cert9:'Essenciais da Negociação', cert10:'Fundamentos de Liderança',
-      cert11:'Engenharia de Prompt: criando prompts eficazes para IA Generativa',
+      cert1:'Segurança de Rede: Firewall, WAF e SIEM', cert6:'IA Generativa', cert8:'Lógica de Programação (3 módulos)', cert9:'Essenciais da Negociação', cert10:'Fundamentos de Liderança', cert11:'Engenharia de Prompt: criando prompts eficazes para IA Generativa',
+      ss1:'Comunicação Eficaz', ss2:'Trabalho em Equipe', ss3:'Pensamento Analítico', ss4:'Resolução de Problemas', ss5:'Organização', ss6:'Gestão do Tempo', ss7:'Adaptabilidade', ss8:'Aprendizagem Contínua', ss9:'Proatividade', ss10:'Inteligência Emocional', ss11:'Negociação', ss12:'Foco em Resultados', ss13:'Orientação ao Cliente', ss14:'Resiliência', ss15:'Liderança Situacional',
       p1_title:'Sorteador de Números', p1_desc:'Simulação de sorteios dinâmica e interativa com lógica de aleatoriedade e atualização em tempo real.',
       p2_title:'Loja de Jogos', p2_desc:'Loja virtual fictícia com listagem de produtos e conteúdo dinâmico usando tecnologias de front-end.',
       p3_title:'Carrinho de Compras', p3_desc:'Simulação funcional de e-commerce com adição e remoção de itens em tempo real, manipulação de DOM.',
@@ -559,7 +588,13 @@
       f4_badge:'PLANEJADO', f4_title:'Sistema de Comparação de Preços', f4_desc:'Ferramenta que agrega e compara preços de produtos em diferentes e-commerces, com alertas de variação e histórico de preços.',
       f5_badge:'PLANEJADO', f5_title:'Modelo de Previsão de Preços de Ações', f5_desc:'Modelo preditivo usando Python e Machine Learning para prever tendências de preços de ações com base em dados históricos.',
       f6_badge:'PLANEJADO', f6_title:'Análise de Intenção de Compra Online', f6_desc:'Sistema de análise comportamental que identifica padrões de navegação e prediz a intenção de compra de usuários em plataformas de e-commerce.',
-      exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Serviço ao Cliente', exp1_b1:'Atendimento técnico e suporte a clientes, garantindo qualidade na resolução de demandas.',
+      exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Fibra Óptica',
+      exp1_b1:'Instalação, manutenção e reparo de redes de fibra óptica em clientes residenciais e corporativos.',
+      exp1_b2:'Configuração e ativação de serviços de internet, telefonia e televisão.',
+      exp1_b3:'Execução de testes de conectividade e qualidade do sinal com equipamentos de medição e diagnóstico.',
+      exp1_b4:'Identificação e correção de falhas em redes ópticas, garantindo a continuidade dos serviços.',
+      exp1_b5:'Registro de atividades e gestão de ordens de serviço em sistemas corporativos.',
+      exp1_b6:'Atuação em campo com foco na satisfação do cliente e resolução eficiente de problemas técnicos.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Gerente de Estoque', exp2_b1:'Gestão e controle de estoque com foco em acuracidade de inventário e reposição adequada.', exp2_b2:'Planejamento de compras e monitoramento de entradas e saídas para evitar rupturas.', exp2_b3:'Liderança de equipe e acompanhamento de indicadores de giro, perdas e custos.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Vendedor Pracista', exp3_b1:'Prospecção ativa por ligações frias, networking e canais digitais com pipeline sólido.', exp3_b2:'Consultorias financeiras personalizadas, simulações e acompanhamento contratual.', exp3_b3:'Gestão de relacionamento e CRM para monitorar renovações e oportunidades de upsell.',
       exp4_period:'Jan/2024<br />Jul/2024', exp4_role:'Vendedor', exp4_b1:'23 contratos fechados em 4 meses — média de 5+ por mês, acima da meta.', exp4_b2:'Alto desempenho reconhecido em fechamento e gestão de relacionamento com clientes.',
@@ -570,17 +605,17 @@
       nav_sobre:'about', nav_skills:'skills', nav_projetos:'projects', nav_experiencia:'experience', nav_contato:'contact',
       hero_desc:'Developer in training focused on network security, data, and artificial intelligence. Building solutions at the intersection of code, analysis, and digital protection.',
       btn_projects:'View Projects →', btn_contact:'Contact',
-      sec_sobre:'About', sec_skills:'Skills & Technologies', sec_certs:'Certifications', sec_projects:'Projects', sec_future:'Future Projects', sec_exp:'Experience', sec_contact:'Contact',
+      sec_sobre:'About', sec_skills:'Skills & Technologies', sec_certs:'Certifications', sec_soft:'Soft Skills', sec_projects:'Projects', sec_future:'Future Projects', sec_exp:'Experience', sec_contact:'Contact',
       about_p1:'Student of <strong>Systems Analysis and Development</strong> at Anhanguera, São Paulo — with a background in sales and management, now 100% focused on technology.',
       about_p2:'My focus is on the <strong>triple: security, data, and AI</strong>. I believe that understanding how systems work, how to protect them, and how to extract intelligence from them is the foundation of any relevant tech professional.',
       about_p3:'Hands-on certifications in <strong>Pentest, Network Security, SQL, Linux</strong>, and Generative AI — learning every single day.',
       stat1:'Technical certifications', stat2:'Projects built', stat3:'ADS graduation — Anhanguera',
       idiomas_label:'// LANGUAGES', lang_pt:'Portuguese', lang_en:'English', lang_es:'Spanish',
       lang_pt_level:'Native', lang_en_level:'Fluent', lang_es_level:'Intermediate',
-      skill_sec_title:'// Security', skill_data_title:'// Data & AI', skill_dev_title:'// Development',
+      skill_sec_title:'// Security', skill_soft_title:'// Soft Skills', skill_data_title:'// Data & AI', skill_dev_title:'// Development',
       sk_netsec:'Network Security', sk_analytical:'Analytical Thinking', sk_python:'Python (learning)', sk_logic:'Programming Logic',
-      cert1:'Network Security: Firewall, WAF and SIEM', cert6:'Generative AI', cert8:'Programming Logic (3 modules)', cert9:'Negotiation Essentials', cert10:'Leadership Fundamentals',
-      cert11:'Prompt Engineering: creating effective prompts for Generative AI',
+      cert1:'Network Security: Firewall, WAF and SIEM', cert6:'Generative AI', cert8:'Programming Logic (3 modules)', cert9:'Negotiation Essentials', cert10:'Leadership Fundamentals', cert11:'Prompt Engineering: creating effective prompts for Generative AI',
+      ss1:'Effective Communication', ss2:'Teamwork', ss3:'Analytical Thinking', ss4:'Problem Solving', ss5:'Organization', ss6:'Time Management', ss7:'Adaptability', ss8:'Continuous Learning', ss9:'Proactivity', ss10:'Emotional Intelligence', ss11:'Negotiation', ss12:'Results-Oriented', ss13:'Customer Focus', ss14:'Resilience', ss15:'Situational Leadership',
       p1_title:'Number Randomizer', p1_desc:'Dynamic and interactive lottery simulator with randomness logic and real-time updates.',
       p2_title:'Game Store', p2_desc:'Fictional virtual store with product listings and dynamic content using front-end technologies.',
       p3_title:'Shopping Cart', p3_desc:'Functional e-commerce simulation with real-time item addition and removal, advanced DOM manipulation.',
@@ -593,7 +628,13 @@
       f4_badge:'PLANNED', f4_title:'Price Comparison System', f4_desc:'Tool that aggregates and compares product prices across different e-commerces, with price change alerts and price history tracking.',
       f5_badge:'PLANNED', f5_title:'Stock Price Prediction Model', f5_desc:'Predictive model using Python and Machine Learning to forecast stock price trends based on historical data.',
       f6_badge:'PLANNED', f6_title:'Online Purchase Intent Analysis', f6_desc:'Behavioral analysis system that identifies navigation patterns and predicts user purchase intent on e-commerce platforms.',
-      exp1_period:'Apr/2026<br />Present', exp1_role:'Customer Service Technician', exp1_b1:'Technical support and customer service, ensuring quality resolution of demands.',
+      exp1_period:'Apr/2026<br />Present', exp1_role:'Fiber Optic Technician',
+      exp1_b1:'Installation, maintenance, and repair of fiber optic networks for residential and corporate clients.',
+      exp1_b2:'Configuration and activation of internet, telephony, and television services.',
+      exp1_b3:'Connectivity and signal quality testing using measurement and diagnostic equipment.',
+      exp1_b4:'Identification and correction of faults in optical networks, ensuring service continuity.',
+      exp1_b5:'Activity logging and service order management in corporate systems.',
+      exp1_b6:'Field operations focused on customer satisfaction and efficient technical problem resolution.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Inventory Manager', exp2_b1:'Inventory management and control focused on accuracy, organization, and adequate replenishment.', exp2_b2:'Purchase planning and monitoring of inflows and outflows to avoid stockouts.', exp2_b3:'Team leadership and tracking of KPIs including turnover, losses, and costs.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Field Sales Representative', exp3_b1:'Active prospecting through cold calls, networking, and digital channels with a solid pipeline.', exp3_b2:'Personalized financial consulting, simulations, and full contract follow-through.', exp3_b3:'Relationship management and CRM usage to monitor renewals and upsell opportunities.',
       exp4_period:'Jan/2024<br />Jul/2024', exp4_role:'Sales Representative', exp4_b1:'23 contracts closed in 4 months — averaging 5+ per month, above target.', exp4_b2:'High performance recognized in closing deals and managing client relationships.',
@@ -604,17 +645,17 @@
       nav_sobre:'sobre mí', nav_skills:'habilidades', nav_projetos:'proyectos', nav_experiencia:'experiencia', nav_contato:'contacto',
       hero_desc:'Desarrollador en formación con enfoque en seguridad de redes, datos e inteligencia artificial. Construyendo soluciones en la intersección entre código, análisis y protección digital.',
       btn_projects:'Ver Proyectos →', btn_contact:'Contacto',
-      sec_sobre:'Sobre mí', sec_skills:'Habilidades & Tecnologías', sec_certs:'Certificaciones', sec_projects:'Proyectos', sec_future:'Proyectos Futuros', sec_exp:'Experiencia', sec_contact:'Contacto',
+      sec_sobre:'Sobre mí', sec_skills:'Habilidades & Tecnologías', sec_certs:'Certificaciones', sec_soft:'Habilidades Blandas', sec_projects:'Proyectos', sec_future:'Proyectos Futuros', sec_exp:'Experiencia', sec_contact:'Contacto',
       about_p1:'Estudiante de <strong>Análisis y Desarrollo de Sistemas</strong> en Anhanguera, São Paulo — con trayectoria en ventas y gestión, hoy 100% enfocado en tecnología.',
       about_p2:'Mi enfoque está en la <strong>triple: seguridad, datos e IA</strong>. Creo que entender cómo funcionan los sistemas, cómo protegerlos y cómo extraer inteligencia de ellos es la base de cualquier profesional tech relevante.',
       about_p3:'Certificaciones prácticas en <strong>Pentest, Seguridad de Redes, SQL, Linux</strong> e IA Generativa — aprendiendo todos los días.',
       stat1:'Certificaciones técnicas', stat2:'Proyectos desarrollados', stat3:'Graduación ADS — Anhanguera',
       idiomas_label:'// IDIOMAS', lang_pt:'Portugués', lang_en:'Inglés', lang_es:'Español',
       lang_pt_level:'Nativo', lang_en_level:'Fluido', lang_es_level:'Intermedio',
-      skill_sec_title:'// Seguridad', skill_data_title:'// Datos & IA', skill_dev_title:'// Desarrollo',
+      skill_sec_title:'// Seguridad', skill_soft_title:'// Soft Skills', skill_data_title:'// Datos & IA', skill_dev_title:'// Desarrollo',
       sk_netsec:'Seguridad de Redes', sk_analytical:'Pensamiento Analítico', sk_python:'Python (aprendiendo)', sk_logic:'Lógica de Programación',
-      cert1:'Seguridad de Red: Firewall, WAF y SIEM', cert6:'IA Generativa', cert8:'Lógica de Programación (3 módulos)', cert9:'Fundamentos de Negociación', cert10:'Fundamentos de Liderazgo',
-      cert11:'Ingeniería de Prompts: creando prompts eficaces para IA Generativa',
+      cert1:'Seguridad de Red: Firewall, WAF y SIEM', cert6:'IA Generativa', cert8:'Lógica de Programación (3 módulos)', cert9:'Fundamentos de Negociación', cert10:'Fundamentos de Liderazgo', cert11:'Ingeniería de Prompts: creando prompts eficaces para IA Generativa',
+      ss1:'Comunicación Eficaz', ss2:'Trabajo en Equipo', ss3:'Pensamiento Analítico', ss4:'Resolución de Problemas', ss5:'Organización', ss6:'Gestión del Tiempo', ss7:'Adaptabilidad', ss8:'Aprendizaje Continuo', ss9:'Proactividad', ss10:'Inteligencia Emocional', ss11:'Negociación', ss12:'Enfoque en Resultados', ss13:'Orientación al Cliente', ss14:'Resiliencia', ss15:'Liderazgo Situacional',
       p1_title:'Sorteador de Números', p1_desc:'Simulación de sorteos dinámica e interactiva con lógica de aleatoriedad y actualización en tiempo real.',
       p2_title:'Tienda de Juegos', p2_desc:'Tienda virtual ficticia con listado de productos y contenido dinámico usando tecnologías de front-end.',
       p3_title:'Carrito de Compras', p3_desc:'Simulación funcional de e-commerce con adición y eliminación de ítems en tiempo real, manipulación avanzada del DOM.',
@@ -627,7 +668,13 @@
       f4_badge:'PLANIFICADO', f4_title:'Sistema de Comparación de Precios', f4_desc:'Herramienta que agrega y compara precios de productos en diferentes e-commerces, con alertas de variación e historial de precios.',
       f5_badge:'PLANIFICADO', f5_title:'Modelo de Predicción de Precios de Acciones', f5_desc:'Modelo predictivo usando Python y Machine Learning para prever tendencias de precios de acciones basado en datos históricos.',
       f6_badge:'PLANIFICADO', f6_title:'Análisis de Intención de Compra Online', f6_desc:'Sistema de análisis conductual que identifica patrones de navegación y predice la intención de compra de usuarios en plataformas de e-commerce.',
-      exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Servicio al Cliente', exp1_b1:'Soporte técnico y atención al cliente, garantizando calidad en la resolución de demandas.',
+      exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Fibra Óptica',
+      exp1_b1:'Instalación, mantenimiento y reparación de redes de fibra óptica para clientes residenciales y corporativos.',
+      exp1_b2:'Configuración y activación de servicios de internet, telefonía y televisión.',
+      exp1_b3:'Ejecución de pruebas de conectividad y calidad de señal con equipos de medición y diagnóstico.',
+      exp1_b4:'Identificación y corrección de fallas en redes ópticas, garantizando la continuidad de los servicios.',
+      exp1_b5:'Registro de actividades y gestión de órdenes de servicio en sistemas corporativos.',
+      exp1_b6:'Trabajo en campo con foco en la satisfacción del cliente y resolución eficiente de problemas técnicos.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Gerente de Inventario', exp2_b1:'Gestión y control de inventario con enfoque en precisión, organización y reposición adecuada.', exp2_b2:'Planificación de compras y monitoreo de entradas y salidas para evitar rupturas de stock.', exp2_b3:'Liderazgo de equipo y seguimiento de indicadores de rotación, pérdidas y costos.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Vendedor de Campo', exp3_b1:'Prospección activa por llamadas en frío, networking y canales digitales con pipeline sólido.', exp3_b2:'Consultoría financiera personalizada, simulaciones y seguimiento contractual completo.', exp3_b3:'Gestión de relaciones y uso de CRM para monitorear renovaciones y oportunidades de upsell.',
       exp4_period:'Ene/2024<br />Jul/2024', exp4_role:'Vendedor', exp4_b1:'23 contratos cerrados en 4 meses — promedio de 5+ por mes, superando la meta.', exp4_b2:'Alto rendimiento reconocido en cierre de ventas y gestión de relaciones con clientes.',
