@@ -331,6 +331,7 @@
     <div class="cert-item"><span class="cert-icon">[08]</span><div><div class="cert-name" data-i18n="cert8">Lógica de Programação (3 módulos)</div><div class="cert-src">Alura</div></div></div>
     <div class="cert-item"><span class="cert-icon">[09]</span><div><div class="cert-name" data-i18n="cert9">Essenciais da Negociação</div><div class="cert-src">Santander Open Academy & ESADE</div></div></div>
     <div class="cert-item"><span class="cert-icon">[10]</span><div><div class="cert-name" data-i18n="cert10">Fundamentos de Liderança</div><div class="cert-src">Santander Open Academy</div></div></div>
+    <div class="cert-item"><span class="cert-icon">[11]</span><div><div class="cert-name" data-i18n="cert11">Engenharia de Prompt: criando prompts eficazes para IA Generativa</div><div class="cert-src">Alura</div></div></div>
   </div>
 </section>
 
@@ -376,6 +377,12 @@
       <div class="project-desc" data-i18n="p6_desc">Simulador de entrada para compra de imóvel desenvolvido como projeto teste para a empresa aMORA.</div>
       <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
     </a>
+    <a href="https://github.com/gui-scavassa/log_analyzer" target="_blank" class="project-card reveal">
+      <div class="project-num">P — 007 <span class="gh-link">↗ github</span></div>
+      <div class="project-title" data-i18n="p7_title">Log Analyzer</div>
+      <div class="project-desc" data-i18n="p7_desc">Ferramenta em Python para análise automática de logs de autenticação, detecção de ameaças (brute force, root login, sudo abuse) e geração de relatório HTML visual.</div>
+      <div class="project-tags"><span class="tag">Python</span><span class="tag">Security</span><span class="tag">HTML</span><span class="tag">YAML</span></div>
+    </a>
   </div>
 
   <!-- PROJETOS FUTUROS -->
@@ -383,11 +390,7 @@
     <span class="label-num">→</span><span class="label-title" data-i18n="sec_future">Projetos Futuros</span><div class="label-line"></div>
   </div>
   <div class="future-grid">
-    <div class="future-card reveal">
-      <div class="future-badge" data-i18n="f1_badge">EM DESENVOLVIMENTO</div>
-      <div class="future-title" data-i18n="f1_title">Script de Análise de Logs</div>
-      <div class="future-desc" data-i18n="f1_desc">Ferramenta em Python para análise automatizada de logs, identificação de padrões suspeitos e relatórios de segurança.</div>
-    </div>
+
     <div class="future-card reveal">
       <div class="future-badge" data-i18n="f2_badge">PLANEJADO</div>
       <div class="future-title" data-i18n="f2_title">Dashboard de Dados com SQL</div>
@@ -397,6 +400,21 @@
       <div class="future-badge" data-i18n="f3_badge">PLANEJADO</div>
       <div class="future-title" data-i18n="f3_title">Chatbot com IA Generativa</div>
       <div class="future-desc" data-i18n="f3_desc">Aplicação integrando API de IA generativa para um assistente inteligente com casos de uso práticos e interface web.</div>
+    </div>
+    <div class="future-card reveal">
+      <div class="future-badge" data-i18n="f4_badge">PLANEJADO</div>
+      <div class="future-title" data-i18n="f4_title">Sistema de Comparação de Preços</div>
+      <div class="future-desc" data-i18n="f4_desc">Ferramenta que agrega e compara preços de produtos em diferentes e-commerces, com alertas de variação e histórico de preços.</div>
+    </div>
+    <div class="future-card reveal">
+      <div class="future-badge" data-i18n="f5_badge">PLANEJADO</div>
+      <div class="future-title" data-i18n="f5_title">Modelo de Previsão de Preços de Ações</div>
+      <div class="future-desc" data-i18n="f5_desc">Modelo preditivo usando Python e Machine Learning para prever tendências de preços de ações com base em dados históricos.</div>
+    </div>
+    <div class="future-card reveal">
+      <div class="future-badge" data-i18n="f6_badge">PLANEJADO</div>
+      <div class="future-title" data-i18n="f6_title">Análise de Intenção de Compra Online</div>
+      <div class="future-desc" data-i18n="f6_desc">Sistema de análise comportamental que identifica padrões de navegação e prediz a intenção de compra de usuários em plataformas de e-commerce.</div>
     </div>
   </div>
 </section>
@@ -513,130 +531,106 @@
   window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id;});navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'#e8e8e8':'';} );});
 
   // ---- i18n TRANSLATIONS ----
-      const translations = {
+        const translations = {
     pt: {
-      // Nav
       nav_sobre:'sobre', nav_skills:'skills', nav_projetos:'projetos', nav_experiencia:'experiência', nav_contato:'contato',
-      // Hero
       hero_desc:'Desenvolvedor em formação com foco em segurança de redes, dados e inteligência artificial. Construindo soluções na interseção entre código, análise e proteção digital.',
       btn_projects:'Ver Projetos →', btn_contact:'Contato',
-      // Sections
       sec_sobre:'Sobre', sec_skills:'Skills & Tecnologias', sec_certs:'Certificações', sec_projects:'Projetos', sec_future:'Projetos Futuros', sec_exp:'Experiência', sec_contact:'Contato',
-      // About
       about_p1:'Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na Anhanguera, São Paulo — com trajetória construída em vendas e gestão, hoje 100% direcionada para tecnologia.',
       about_p2:'Meu foco está na <strong>tríplice: segurança, dados e IA</strong>. Acredito que entender como sistemas funcionam, como protegê-los e como extrair inteligência deles é a base de qualquer profissional tech relevante.',
       about_p3:'Certificações práticas em <strong>Pentest, Segurança de Redes, SQL, Linux</strong> e IA Generativa — e aprendendo todos os dias.',
       stat1:'Certificações técnicas', stat2:'Projetos desenvolvidos', stat3:'Conclusão ADS — Anhanguera',
-      // Languages section
-      idiomas_label:'// IDIOMAS',
-      lang_pt:'Português', lang_en:'Inglês', lang_es:'Espanhol',
+      idiomas_label:'// IDIOMAS', lang_pt:'Português', lang_en:'Inglês', lang_es:'Espanhol',
       lang_pt_level:'Nativo', lang_en_level:'Fluente', lang_es_level:'Intermediário',
-      // Skills
       skill_sec_title:'// Segurança', skill_data_title:'// Dados & IA', skill_dev_title:'// Desenvolvimento',
       sk_netsec:'Segurança de Redes', sk_analytical:'Raciocínio Analítico', sk_python:'Python (aprendendo)', sk_logic:'Lógica de Programação',
-      // Certs
       cert1:'Segurança de Rede: Firewall, WAF e SIEM', cert6:'IA Generativa', cert8:'Lógica de Programação (3 módulos)', cert9:'Essenciais da Negociação', cert10:'Fundamentos de Liderança',
-      // Projects
+      cert11:'Engenharia de Prompt: criando prompts eficazes para IA Generativa',
       p1_title:'Sorteador de Números', p1_desc:'Simulação de sorteios dinâmica e interativa com lógica de aleatoriedade e atualização em tempo real.',
       p2_title:'Loja de Jogos', p2_desc:'Loja virtual fictícia com listagem de produtos e conteúdo dinâmico usando tecnologias de front-end.',
       p3_title:'Carrinho de Compras', p3_desc:'Simulação funcional de e-commerce com adição e remoção de itens em tempo real, manipulação de DOM.',
       p4_title:'Sistema de Ingressos Online', p4_desc:'Página que simula escolha de eventos e geração de ingressos digitais com interface interativa.',
       p5_title:'Gerador de Amigo Secreto', p5_desc:'App web que sorteia pares aleatórios com interface simples e lógica de embaralhamento.',
       p6_title:'Simulador aMORA', p6_desc:'Simulador de entrada para compra de imóvel desenvolvido como projeto teste para a empresa aMORA.',
-      // Future projects
-      f1_badge:'EM DESENVOLVIMENTO', f1_title:'Script de Análise de Logs', f1_desc:'Ferramenta em Python para análise automatizada de logs de sistema, identificação de padrões suspeitos e geração de relatórios de segurança.',
+      p7_title:'Log Analyzer', p7_desc:'Ferramenta em Python para análise automática de logs de autenticação, detecção de ameaças (brute force, root login, sudo abuse) e geração de relatório HTML visual.',
       f2_badge:'PLANEJADO', f2_title:'Dashboard de Dados com SQL', f2_desc:'Visualização de dados combinando SQL para extração e tratamento com um dashboard interativo para apresentação de insights.',
-      f3_badge:'PLANEJADO', f3_title:'Chatbot com IA Generativa', f3_desc:'Aplicação integrando uma API de IA generativa para criação de um assistente inteligente com casos de uso práticos e interface web.',
-      // Experience
+      f3_badge:'PLANEJADO', f3_title:'Chatbot com IA Generativa', f3_desc:'Aplicação integrando API de IA generativa para um assistente inteligente com casos de uso práticos e interface web.',
+      f4_badge:'PLANEJADO', f4_title:'Sistema de Comparação de Preços', f4_desc:'Ferramenta que agrega e compara preços de produtos em diferentes e-commerces, com alertas de variação e histórico de preços.',
+      f5_badge:'PLANEJADO', f5_title:'Modelo de Previsão de Preços de Ações', f5_desc:'Modelo preditivo usando Python e Machine Learning para prever tendências de preços de ações com base em dados históricos.',
+      f6_badge:'PLANEJADO', f6_title:'Análise de Intenção de Compra Online', f6_desc:'Sistema de análise comportamental que identifica padrões de navegação e prediz a intenção de compra de usuários em plataformas de e-commerce.',
       exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Serviço ao Cliente', exp1_b1:'Atendimento técnico e suporte a clientes, garantindo qualidade na resolução de demandas.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Gerente de Estoque', exp2_b1:'Gestão e controle de estoque com foco em acuracidade de inventário e reposição adequada.', exp2_b2:'Planejamento de compras e monitoramento de entradas e saídas para evitar rupturas.', exp2_b3:'Liderança de equipe e acompanhamento de indicadores de giro, perdas e custos.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Vendedor Pracista', exp3_b1:'Prospecção ativa por ligações frias, networking e canais digitais com pipeline sólido.', exp3_b2:'Consultorias financeiras personalizadas, simulações e acompanhamento contratual.', exp3_b3:'Gestão de relacionamento e CRM para monitorar renovações e oportunidades de upsell.',
       exp4_period:'Jan/2024<br />Jul/2024', exp4_role:'Vendedor', exp4_b1:'23 contratos fechados em 4 meses — média de 5+ por mês, acima da meta.', exp4_b2:'Alto desempenho reconhecido em fechamento e gestão de relacionamento com clientes.',
-      // Contact & Footer
       contact_headline:'Vamos<br /><em>construir</em><br />algo.',
       footer_loc:'São Paulo, Brasil — ADS · Anhanguera',
     },
     en: {
-      // Nav
       nav_sobre:'about', nav_skills:'skills', nav_projetos:'projects', nav_experiencia:'experience', nav_contato:'contact',
-      // Hero
       hero_desc:'Developer in training focused on network security, data, and artificial intelligence. Building solutions at the intersection of code, analysis, and digital protection.',
       btn_projects:'View Projects →', btn_contact:'Contact',
-      // Sections
       sec_sobre:'About', sec_skills:'Skills & Technologies', sec_certs:'Certifications', sec_projects:'Projects', sec_future:'Future Projects', sec_exp:'Experience', sec_contact:'Contact',
-      // About
       about_p1:'Student of <strong>Systems Analysis and Development</strong> at Anhanguera, São Paulo — with a background in sales and management, now 100% focused on technology.',
       about_p2:'My focus is on the <strong>triple: security, data, and AI</strong>. I believe that understanding how systems work, how to protect them, and how to extract intelligence from them is the foundation of any relevant tech professional.',
       about_p3:'Hands-on certifications in <strong>Pentest, Network Security, SQL, Linux</strong>, and Generative AI — learning every single day.',
       stat1:'Technical certifications', stat2:'Projects built', stat3:'ADS graduation — Anhanguera',
-      // Languages section
-      idiomas_label:'// LANGUAGES',
-      lang_pt:'Portuguese', lang_en:'English', lang_es:'Spanish',
+      idiomas_label:'// LANGUAGES', lang_pt:'Portuguese', lang_en:'English', lang_es:'Spanish',
       lang_pt_level:'Native', lang_en_level:'Fluent', lang_es_level:'Intermediate',
-      // Skills
       skill_sec_title:'// Security', skill_data_title:'// Data & AI', skill_dev_title:'// Development',
       sk_netsec:'Network Security', sk_analytical:'Analytical Thinking', sk_python:'Python (learning)', sk_logic:'Programming Logic',
-      // Certs
       cert1:'Network Security: Firewall, WAF and SIEM', cert6:'Generative AI', cert8:'Programming Logic (3 modules)', cert9:'Negotiation Essentials', cert10:'Leadership Fundamentals',
-      // Projects
+      cert11:'Prompt Engineering: creating effective prompts for Generative AI',
       p1_title:'Number Randomizer', p1_desc:'Dynamic and interactive lottery simulator with randomness logic and real-time updates.',
       p2_title:'Game Store', p2_desc:'Fictional virtual store with product listings and dynamic content using front-end technologies.',
       p3_title:'Shopping Cart', p3_desc:'Functional e-commerce simulation with real-time item addition and removal, advanced DOM manipulation.',
       p4_title:'Online Ticket System', p4_desc:'Page simulating event selection and digital ticket generation with an interactive interface.',
       p5_title:'Secret Santa Generator', p5_desc:'Web app that randomly pairs participants with a simple, intuitive interface and shuffle logic.',
       p6_title:'aMORA Simulator', p6_desc:'Down payment simulator for real estate purchase, developed as a test project for the company aMORA.',
-      // Future projects
-      f1_badge:'IN DEVELOPMENT', f1_title:'Log Analysis Script', f1_desc:'Python tool for automated system log analysis, suspicious pattern detection, and security report generation.',
+      p7_title:'Log Analyzer', p7_desc:'Python tool for automated authentication log analysis, threat detection (brute force, root login, sudo abuse), and visual HTML report generation.',
       f2_badge:'PLANNED', f2_title:'SQL Data Dashboard', f2_desc:'Data visualization combining SQL for extraction and transformation with an interactive dashboard to present actionable insights.',
       f3_badge:'PLANNED', f3_title:'Generative AI Chatbot', f3_desc:'Application integrating a generative AI API to build an intelligent assistant with practical real-world use cases and a clean web interface.',
-      // Experience
+      f4_badge:'PLANNED', f4_title:'Price Comparison System', f4_desc:'Tool that aggregates and compares product prices across different e-commerces, with price change alerts and price history tracking.',
+      f5_badge:'PLANNED', f5_title:'Stock Price Prediction Model', f5_desc:'Predictive model using Python and Machine Learning to forecast stock price trends based on historical data.',
+      f6_badge:'PLANNED', f6_title:'Online Purchase Intent Analysis', f6_desc:'Behavioral analysis system that identifies navigation patterns and predicts user purchase intent on e-commerce platforms.',
       exp1_period:'Apr/2026<br />Present', exp1_role:'Customer Service Technician', exp1_b1:'Technical support and customer service, ensuring quality resolution of demands.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Inventory Manager', exp2_b1:'Inventory management and control focused on accuracy, organization, and adequate replenishment.', exp2_b2:'Purchase planning and monitoring of inflows and outflows to avoid stockouts.', exp2_b3:'Team leadership and tracking of KPIs including turnover, losses, and costs.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Field Sales Representative', exp3_b1:'Active prospecting through cold calls, networking, and digital channels with a solid pipeline.', exp3_b2:'Personalized financial consulting, simulations, and full contract follow-through.', exp3_b3:'Relationship management and CRM usage to monitor renewals and upsell opportunities.',
       exp4_period:'Jan/2024<br />Jul/2024', exp4_role:'Sales Representative', exp4_b1:'23 contracts closed in 4 months — averaging 5+ per month, above target.', exp4_b2:'High performance recognized in closing deals and managing client relationships.',
-      // Contact & Footer
       contact_headline:"Let's<br /><em>build</em><br />something.",
       footer_loc:'São Paulo, Brazil — ADS · Anhanguera',
     },
     es: {
-      // Nav
       nav_sobre:'sobre mí', nav_skills:'habilidades', nav_projetos:'proyectos', nav_experiencia:'experiencia', nav_contato:'contacto',
-      // Hero
       hero_desc:'Desarrollador en formación con enfoque en seguridad de redes, datos e inteligencia artificial. Construyendo soluciones en la intersección entre código, análisis y protección digital.',
       btn_projects:'Ver Proyectos →', btn_contact:'Contacto',
-      // Sections
       sec_sobre:'Sobre mí', sec_skills:'Habilidades & Tecnologías', sec_certs:'Certificaciones', sec_projects:'Proyectos', sec_future:'Proyectos Futuros', sec_exp:'Experiencia', sec_contact:'Contacto',
-      // About
       about_p1:'Estudiante de <strong>Análisis y Desarrollo de Sistemas</strong> en Anhanguera, São Paulo — con trayectoria en ventas y gestión, hoy 100% enfocado en tecnología.',
       about_p2:'Mi enfoque está en la <strong>triple: seguridad, datos e IA</strong>. Creo que entender cómo funcionan los sistemas, cómo protegerlos y cómo extraer inteligencia de ellos es la base de cualquier profesional tech relevante.',
       about_p3:'Certificaciones prácticas en <strong>Pentest, Seguridad de Redes, SQL, Linux</strong> e IA Generativa — aprendiendo todos los días.',
       stat1:'Certificaciones técnicas', stat2:'Proyectos desarrollados', stat3:'Graduación ADS — Anhanguera',
-      // Languages section
-      idiomas_label:'// IDIOMAS',
-      lang_pt:'Portugués', lang_en:'Inglés', lang_es:'Español',
+      idiomas_label:'// IDIOMAS', lang_pt:'Portugués', lang_en:'Inglés', lang_es:'Español',
       lang_pt_level:'Nativo', lang_en_level:'Fluido', lang_es_level:'Intermedio',
-      // Skills
       skill_sec_title:'// Seguridad', skill_data_title:'// Datos & IA', skill_dev_title:'// Desarrollo',
       sk_netsec:'Seguridad de Redes', sk_analytical:'Pensamiento Analítico', sk_python:'Python (aprendiendo)', sk_logic:'Lógica de Programación',
-      // Certs
       cert1:'Seguridad de Red: Firewall, WAF y SIEM', cert6:'IA Generativa', cert8:'Lógica de Programación (3 módulos)', cert9:'Fundamentos de Negociación', cert10:'Fundamentos de Liderazgo',
-      // Projects
+      cert11:'Ingeniería de Prompts: creando prompts eficaces para IA Generativa',
       p1_title:'Sorteador de Números', p1_desc:'Simulación de sorteos dinámica e interactiva con lógica de aleatoriedad y actualización en tiempo real.',
       p2_title:'Tienda de Juegos', p2_desc:'Tienda virtual ficticia con listado de productos y contenido dinámico usando tecnologías de front-end.',
       p3_title:'Carrito de Compras', p3_desc:'Simulación funcional de e-commerce con adición y eliminación de ítems en tiempo real, manipulación avanzada del DOM.',
       p4_title:'Sistema de Entradas Online', p4_desc:'Página que simula la elección de eventos y generación de entradas digitales con interfaz interactiva.',
       p5_title:'Generador de Amigo Secreto', p5_desc:'App web que sortea pares aleatorios con interfaz simple y lógica de mezcla.',
       p6_title:'Simulador aMORA', p6_desc:'Simulador de entrada para compra de inmueble desarrollado como proyecto de prueba para la empresa aMORA.',
-      // Future projects
-      f1_badge:'EN DESARROLLO', f1_title:'Script de Análisis de Logs', f1_desc:'Herramienta en Python para análisis automatizado de logs de sistema, identificación de patrones sospechosos y generación de reportes de seguridad.',
+      p7_title:'Log Analyzer', p7_desc:'Herramienta en Python para análisis automático de logs de autenticación, detección de amenazas (brute force, root login, sudo abuse) y generación de reporte HTML visual.',
       f2_badge:'PLANIFICADO', f2_title:'Dashboard de Datos con SQL', f2_desc:'Visualización de datos combinando SQL para extracción y transformación con un dashboard interactivo para presentar insights accionables.',
       f3_badge:'PLANIFICADO', f3_title:'Chatbot con IA Generativa', f3_desc:'Aplicación que integra una API de IA generativa para crear un asistente inteligente con casos de uso prácticos e interfaz web.',
-      // Experience
+      f4_badge:'PLANIFICADO', f4_title:'Sistema de Comparación de Precios', f4_desc:'Herramienta que agrega y compara precios de productos en diferentes e-commerces, con alertas de variación e historial de precios.',
+      f5_badge:'PLANIFICADO', f5_title:'Modelo de Predicción de Precios de Acciones', f5_desc:'Modelo predictivo usando Python y Machine Learning para prever tendencias de precios de acciones basado en datos históricos.',
+      f6_badge:'PLANIFICADO', f6_title:'Análisis de Intención de Compra Online', f6_desc:'Sistema de análisis conductual que identifica patrones de navegación y predice la intención de compra de usuarios en plataformas de e-commerce.',
       exp1_period:'Abr/2026<br />Presente', exp1_role:'Técnico de Servicio al Cliente', exp1_b1:'Soporte técnico y atención al cliente, garantizando calidad en la resolución de demandas.',
       exp2_period:'Nov/2025<br />Mar/2026', exp2_role:'Gerente de Inventario', exp2_b1:'Gestión y control de inventario con enfoque en precisión, organización y reposición adecuada.', exp2_b2:'Planificación de compras y monitoreo de entradas y salidas para evitar rupturas de stock.', exp2_b3:'Liderazgo de equipo y seguimiento de indicadores de rotación, pérdidas y costos.',
       exp3_period:'Jul/2024<br />Jul/2025', exp3_role:'Vendedor de Campo', exp3_b1:'Prospección activa por llamadas en frío, networking y canales digitales con pipeline sólido.', exp3_b2:'Consultoría financiera personalizada, simulaciones y seguimiento contractual completo.', exp3_b3:'Gestión de relaciones y uso de CRM para monitorear renovaciones y oportunidades de upsell.',
       exp4_period:'Ene/2024<br />Jul/2024', exp4_role:'Vendedor', exp4_b1:'23 contratos cerrados en 4 meses — promedio de 5+ por mes, superando la meta.', exp4_b2:'Alto rendimiento reconocido en cierre de ventas y gestión de relaciones con clientes.',
-      // Contact & Footer
       contact_headline:'Vamos a<br /><em>construir</em><br />algo.',
       footer_loc:'São Paulo, Brasil — ADS · Anhanguera',
     }
